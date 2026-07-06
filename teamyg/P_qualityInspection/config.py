@@ -1,0 +1,44 @@
+"""Configuration for Ellipse Pillar Alignment project."""
+
+FLASK_HOST = "0.0.0.0"
+FLASK_PORT = 5001
+
+CAMERA_W = 640
+CAMERA_H = 480
+CAMERA_FPS = 30
+
+# Alignment convention
+# 0 deg: image x-axis direction, 90 deg: image y-axis direction.
+TARGET_YAW_DEG = 90.0
+
+# Robot calibration placeholders.
+# robot_rotate_deg = ROBOT_ROTATION_SIGN * rotate_deg + ROBOT_ROTATION_OFFSET_DEG
+ROBOT_ROTATION_SIGN = 1.0
+ROBOT_ROTATION_OFFSET_DEG = 0.0
+
+# Ellipse detection parameters
+MIN_CONTOUR_AREA = 400
+MAX_CONTOUR_AREA_RATIO = 0.35
+MAX_MAJOR_AXIS_RATIO = 0.55
+MIN_AXIS_RATIO = 1.12
+MAX_AXIS_RATIO = 10.0
+ELLIPSE_FIT_SCORE_MIN = 0.42
+MIN_SHAPE_SCORE = 0.12
+
+# Edge / color sensitivity (higher = more sensitive)
+CANNY_LOW_FACTOR = 0.45
+CANNY_HIGH_FACTOR = 1.15
+HSV_SATURATION_MIN = 40
+HSV_VALUE_MIN = 45
+
+# ROI / depth parameters
+ROI_MARGIN_RATIO = 0.25
+HEIGHT_THRESHOLD_MM = 8.0
+HEIGHT_PERCENTILE = 95
+MIN_OBJECT_PIXELS = 150
+BACKGROUND_CAPTURE_FRAMES = 10
+BACKGROUND_WARMUP_FRAMES = 5
+
+# MJPEG
+JPEG_QUALITY = 82
+STREAM_SLEEP_SEC = 0.04
